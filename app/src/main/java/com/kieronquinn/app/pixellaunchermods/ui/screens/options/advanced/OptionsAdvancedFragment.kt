@@ -23,12 +23,12 @@ class OptionsAdvancedFragment: BaseSettingsFragment(), BackAvailable {
                 contentRes = R.string.options_advanced_restart_content,
                 onClick = viewModel::onRestartClicked
             ),
-            BaseSettingsViewModel.SettingsItem.Switch(
+            /*BaseSettingsViewModel.SettingsItem.Switch(
                 icon = R.drawable.ic_options_advanced_shortcut,
                 titleRes = R.string.options_advanced_shortcut,
                 contentRes = R.string.options_advanced_shortcut_content,
                 setting = viewModel.suppressShortcutSetting
-            ),
+            ),*/
             BaseSettingsViewModel.SettingsItem.Text(
                 icon = R.drawable.ic_options_advanced_reset,
                 titleRes = R.string.options_advanced_reset,

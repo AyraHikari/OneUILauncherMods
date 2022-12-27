@@ -132,7 +132,7 @@ class PixelLauncherModsRootServiceImpl: IPixelLauncherModsRootService.Stub() {
             `package` = PIXEL_LAUNCHER_PACKAGE_NAME
             component = ComponentName(
                 PIXEL_LAUNCHER_PACKAGE_NAME,
-                "com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+                "com.android.homescreen.application.LauncherApplication"
             )
             addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
         }
@@ -648,12 +648,12 @@ class PixelLauncherModsRootServiceImpl: IPixelLauncherModsRootService.Stub() {
     private fun restartPixelLauncher() {
         val wasInForeground = isPixelLauncherInForeground
         /**
-         * We can't use ActivityManager here as the Pixel Launcher doesn't have the required
+         * We can't use ActivityManager here as the OneUI Launcher doesn't have the required
          * permission, but we can use `am force-stop` from a separate process.
          */
         execRootCommand("am force-stop $PIXEL_LAUNCHER_PACKAGE_NAME")
         if(wasInForeground){
-            //"Start" the Pixel Launcher, this will actually just bring it to the foreground again
+            //"Start" the OneUI Launcher, this will actually just bring it to the foreground again
             activityManager.startActivityWithFeature(
                 null,
                 PIXEL_LAUNCHER_PACKAGE_NAME,
@@ -677,7 +677,7 @@ class PixelLauncherModsRootServiceImpl: IPixelLauncherModsRootService.Stub() {
         //Needs root for permission change
         grantBindPermissionIfRequired()
         /**
-         * Switch to the Pixel Launcher UID, allowing access to App Shortcuts and widgets, while
+         * Switch to the OneUI Launcher UID, allowing access to App Shortcuts and widgets, while
          * keeping access to databases.
          */
         Os.setuid(pixelLauncherUid)
@@ -789,7 +789,7 @@ class PixelLauncherModsRootServiceImpl: IPixelLauncherModsRootService.Stub() {
 
     /**
      *  Execs a command as root. This works as it's a separate process spawned from this one,
-     *  which is spawned as the root UID (despite us changing our UID to the Pixel Launcher one).
+     *  which is spawned as the root UID (despite us changing our UID to the OneUI Launcher one).
      */
     private fun execRootCommand(command: String) {
         Runtime.getRuntime().exec(command)

@@ -367,7 +367,7 @@ class RemoteAppsRepositoryImpl(
     }
 
     override suspend fun resetModifiedApp(componentName: String): RemoteApp? {
-        //Clear remote entry and restart Pixel Launcher
+        //Clear remote entry and restart OneUI Launcher
         rootServiceRepository.runWithRootService {
             it.deleteEntryAndRestart(componentName)
         } ?: return null
@@ -377,7 +377,7 @@ class RemoteAppsRepositoryImpl(
     }
 
     override suspend fun resetModifiedShortcut(componentName: String): RemoteApp? {
-        //Clear remote entry and restart Pixel Launcher
+        //Clear remote entry and restart OneUI Launcher
         rootServiceRepository.runWithRootService {
             it.deleteEntryAndRestart(componentName)
         } ?: return null

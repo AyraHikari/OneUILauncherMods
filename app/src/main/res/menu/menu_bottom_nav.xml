@@ -6,10 +6,6 @@
         android:id="@+id/nav_graph_apps"
         android:icon="@drawable/ic_nav_apps" />
 
-    <item android:title="@string/menu_bottom_nav_shortcuts"
-        android:id="@+id/nav_graph_shortcuts"
-        android:icon="@drawable/ic_nav_shortcuts" />
-
     <item android:title="@string/menu_bottom_nav_tweaks"
         android:id="@+id/nav_graph_tweaks"
         android:icon="@drawable/ic_nav_tweaks" />

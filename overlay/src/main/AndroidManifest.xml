@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.google.android.apps.nexuslauncher.plmoverlay"
+    package="com.sec.android.app.launcher.plmoverlay"
     android:compileSdkVersion="31"
     android:compileSdkVersionCodename="12"
     android:versionCode="1"
@@ -15,7 +15,7 @@
     <overlay
         android:priority="10"
         android:targetName="PixelLauncherModsOverlay"
-        android:targetPackage="com.google.android.apps.nexuslauncher" />
+        android:targetPackage="com.sec.android.app.launcher" />
 
     <application
         android:allowBackup="false"

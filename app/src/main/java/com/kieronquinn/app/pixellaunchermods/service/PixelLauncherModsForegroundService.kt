@@ -31,20 +31,20 @@ class PixelLauncherModsForegroundService : LifecycleService() {
     companion object {
 
         fun start(context: Context, restart: Boolean = false) {
-            val intent = Intent(context, PixelLauncherModsForegroundService::class.java)
+            /*val intent = Intent(context, PixelLauncherModsForegroundService::class.java)
             if (restart) {
                 context.stopService(intent)
             }
-            context.startForegroundService(intent)
+            context.startForegroundService(intent)*/
         }
 
         private fun stop(context: Context, intent: Intent) {
-            context.stopService(intent)
+            //context.stopService(intent)
         }
 
         /**
          *  The delay time between a package update and applying PLM changes. Allows time for the
-         *  Pixel Launcher to update its icons.
+         *  OneUI Launcher to update its icons.
          */
         private const val PACKAGE_CHANGED_DELAY = 5000L
     }
@@ -95,7 +95,7 @@ class PixelLauncherModsForegroundService : LifecycleService() {
                     deferred.isFromRestart
                 }
                 DeferredRestartMode.BACKGROUND -> {
-                    //Restart only if Pixel Launcher is in the background
+                    //Restart only if OneUI Launcher is in the background
                     if (!foreground) {
                         deferred.isFromRestart
                     } else null
@@ -185,8 +185,8 @@ class PixelLauncherModsForegroundService : LifecycleService() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        val notification = showNotification()
-        startForeground(NotificationId.FOREGROUND_SERVICE.ordinal, notification)
+        //val notification = showNotification()
+        //startForeground(NotificationId.FOREGROUND_SERVICE.ordinal, notification)
         return super.onStartCommand(intent, flags, startId)
     }
 

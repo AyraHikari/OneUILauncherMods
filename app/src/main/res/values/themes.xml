@@ -1,9 +1,9 @@
 <resources>
     <style name="Theme.PixelLauncherMods.Splash" parent="Theme.SplashScreen.IconBackground">
-        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <!--<item name="windowSplashScreenBackground">@color/splash_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/avd_splash</item>
         <item name="windowSplashScreenAnimationDuration">1500</item>
-        <item name="windowSplashScreenIconBackgroundColor">@color/pixel_blue</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/pixel_blue</item>-->
         <item name="postSplashScreenTheme">@style/Theme.PixelLauncherMods</item>
     </style>
     <style name="Theme.PixelLauncherMods" parent="Theme.Material3.DayNight.NoActionBar">

@@ -32,6 +32,7 @@ class OptionsViewModelImpl(
         private const val LINK_GITHUB = "https://kieronquinn.co.uk/redirect/plm/github"
         private const val LINK_XDA = "https://kieronquinn.co.uk/redirect/plm/xda"
         private const val LINK_DONATE = "https://kieronquinn.co.uk/redirect/plm/donate"
+        private const val LINK_PLUGIN_GITHUB = "https://github.com/AyraHikari/SamsungLauncherPort/blob/main/plugins.md"
     }
 
     override fun onDeferredRestartClicked() {
@@ -81,7 +82,7 @@ class OptionsViewModelImpl(
     override fun onAboutGitHubClicked() {
         viewModelScope.launch {
             navigation.navigate(Intent(Intent.ACTION_VIEW).apply {
-                data = Uri.parse(LINK_GITHUB)
+                data = Uri.parse(LINK_PLUGIN_GITHUB)
             })
         }
     }

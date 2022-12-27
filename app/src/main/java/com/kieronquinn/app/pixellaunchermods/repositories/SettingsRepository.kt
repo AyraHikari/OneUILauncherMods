@@ -67,6 +67,9 @@ interface SettingsRepository {
     //Debug: Show toast message with (possible) restart reason from service
     val debugRestartReasonToast: PixelLauncherModsSetting<Boolean>
 
+    //Toggle launcher dark mode
+    val toggleDarkMode: PixelLauncherModsSetting<Boolean>
+
     suspend fun resetIcons()
 
     abstract class PixelLauncherModsSetting<T> {
@@ -131,7 +134,7 @@ interface SettingsRepository {
     }
 
     /**
-     *  The mode for when to restart the Pixel Launcher after changes. While the app is open,
+     *  The mode for when to restart the OneUI Launcher after changes. While the app is open,
      *  the mode is always [INSTANT] so changes are applied immediately.
      */
     enum class DeferredRestartMode(val titleRes: Int, val contentRes: Int) {
@@ -146,7 +149,7 @@ interface SettingsRepository {
         INSTANT(R.string.deferred_restart_instant_title, R.string.deferred_restart_instant_content),
 
         /**
-         *  Restart the launcher once the Pixel Launcher is background
+         *  Restart the launcher once the OneUI Launcher is background
          */
         BACKGROUND(R.string.deferred_restart_background_title, R.string.deferred_restart_background_content),
 
@@ -176,7 +179,7 @@ class SettingsRepositoryImpl(context: Context): SettingsRepository {
         private const val KEY_SUPPRESS_SHORTCUT_LISTENER = "suppress_shortcut_listener"
         private const val DEFAULT_SUPPRESS_SHORTCUT_LISTENER = false
         private const val KEY_HIDDEN_COMPONENTS = "hidden_components"
-        //Default hidden components from the Pixel Launcher, subject to change in the future
+        //Default hidden components from the OneUI Launcher, subject to change in the future
         private val DEFAULT_HIDDEN_COMPONENTS = listOf(
             "com.google.android.googlequicksearchbox/.VoiceSearchActivity",
             "com.google.android.apps.wallpaper/.picker.CategoryPickerActivity",
@@ -193,6 +196,8 @@ class SettingsRepositoryImpl(context: Context): SettingsRepository {
         private const val DEFAULT_PROXY_WIDGET_PREVIEW_ID_BOTTOM = -1
         private const val KEY_DEBUG_RESTART_REASON_TOAST = "debug_restart_reason_toast"
         private const val DEFAULT_DEBUG_RESTART_REASON_TOAST = false
+        private const val KEY_DARK_MODE_TOGGLE = "dark_mode_toggle"
+        private const val DEFAULT_KEY_DARK_MODE_TOGGLE = false
     }
 
     override val shouldLaunchService: PixelLauncherModsSetting<Boolean> = PixelLauncherModsSettingImpl(
@@ -272,6 +277,12 @@ class SettingsRepositoryImpl(context: Context): SettingsRepository {
     override val debugRestartReasonToast: PixelLauncherModsSetting<Boolean> = PixelLauncherModsSettingImpl(
         KEY_DEBUG_RESTART_REASON_TOAST,
         DEFAULT_DEBUG_RESTART_REASON_TOAST,
+        SHARED_BOOLEAN
+    )
+
+    override val toggleDarkMode: PixelLauncherModsSetting<Boolean> = PixelLauncherModsSettingImpl(
+        KEY_DARK_MODE_TOGGLE,
+        DEFAULT_KEY_DARK_MODE_TOGGLE,
         SHARED_BOOLEAN
     )
 

@@ -173,6 +173,6 @@ class PixelLauncherMods: Application() {
 
 }
 
-const val PIXEL_LAUNCHER_PACKAGE_NAME = "com.google.android.apps.nexuslauncher"
-const val OVERLAY_PACKAGE_NAME = "com.google.android.apps.nexuslauncher.plmoverlay"
+const val PIXEL_LAUNCHER_PACKAGE_NAME = "com.sec.android.app.launcher"
+const val OVERLAY_PACKAGE_NAME = "com.sec.android.app.launcher.plmoverlay"
 const val LAWNICONS_PACKAGE_NAME = "app.lawnchair.lawnicons"

@@ -14,7 +14,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.kieronquinn.app.pixellaunchermods"
+        applicationId "me.ayra.sec.launcher.mods"
         minSdk 31
         targetSdk 33
         versionCode tagCode

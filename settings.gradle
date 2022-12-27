@@ -14,7 +14,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "Pixel Launcher Mods"
+rootProject.name = "OneUI Launcher Mods"
 include ':app'
 include ':systemstubs'
 include ':overlay'

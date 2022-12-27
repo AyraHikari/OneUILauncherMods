@@ -14,9 +14,8 @@
     <application
         android:allowBackup="false"
         tools:replace="android:allowBackup"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_theme_store"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:extractNativeLibs="true"
         android:enableOnBackInvokedCallback="true"
@@ -38,6 +37,12 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="plm"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ayramods" />
             </intent-filter>
             <meta-data android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />

@@ -60,7 +60,7 @@ interface OverlayRepository {
     fun createAndInstallOverlay(config: OverlayConfig): Flow<OverlayProgress>
 
     /**
-     *  Gets the current list of filtered components from the Pixel Launcher, enabling the overlay
+     *  Gets the current list of filtered components from the OneUI Launcher, enabling the overlay
      *  if needed
      */
     suspend fun getFilteredComponents(): Array<String>
@@ -214,7 +214,7 @@ class OverlayRepositoryImpl(
         val layout = xml.document {
             //If we're replacing the top we have to keep Smartspace's container, otherwise can get away with a regular FrameLayout
             val rootTag = if(widgetReplacement == WidgetReplacement.TOP){
-                "com.google.android.apps.nexuslauncher.qsb.SmartspaceViewContainer"
+                "com.sec.android.app.launcher.qsb.SmartspaceViewContainer"
             }else{
                 "FrameLayout"
             }

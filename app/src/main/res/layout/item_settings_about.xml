@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/ic_theme_store"
             android:layout_marginTop="@dimen/margin_8"
             android:id="@+id/item_settings_more_about_icon"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,24 +52,9 @@
             android:text="@string/about_contributors"
             app:chipIcon="@drawable/ic_community"
             app:chipSpacing="0dp"
-            app:layout_constraintEnd_toStartOf="@id/item_settings_more_about_donate"
+            app:layout_constraintEnd_toStartOf="@id/item_settings_more_about_github"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_content" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/item_settings_more_about_donate"
-            style="@style/Widget.Material3.Chip.Icon.PixelLauncherMods"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_16"
-            android:layout_marginTop="@dimen/margin_8"
-            android:minHeight="0dp"
-            android:text="@string/donate"
-            app:chipIcon="@drawable/ic_donate"
-            app:chipSpacing="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_settings_more_about_contributors"
             app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_content" />
 
         <com.google.android.material.chip.Chip
@@ -83,38 +68,9 @@
             app:chipIcon="@drawable/ic_github"
             app:chipSpacing="0dp"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintEnd_toStartOf="@id/item_settings_more_about_twitter"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_contributors" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/item_settings_more_about_twitter"
-            style="@style/Widget.Material3.Chip.Icon.PixelLauncherMods"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_16"
-            android:minHeight="0dp"
-            android:text="@string/twitter"
-            app:chipIcon="@drawable/ic_twitter"
-            app:chipSpacing="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_settings_more_about_github"
-            app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_contributors" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/item_settings_more_about_xda"
-            style="@style/Widget.Material3.Chip.Icon.PixelLauncherMods"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_16"
-            android:minHeight="0dp"
-            android:text="@string/xda_thread"
-            app:chipIcon="@drawable/ic_xda"
-            app:chipSpacing="0dp"
-            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintEnd_toStartOf="@id/item_settings_more_about_libraries"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_github" />
+            app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_contributors" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/item_settings_more_about_libraries"
@@ -127,7 +83,7 @@
             app:chipIcon="@drawable/ic_libraries"
             app:chipSpacing="0dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_settings_more_about_xda"
+            app:layout_constraintStart_toEndOf="@id/item_settings_more_about_github"
             app:layout_constraintTop_toBottomOf="@id/item_settings_more_about_github" />
 
 

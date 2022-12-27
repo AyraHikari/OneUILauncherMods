@@ -1,7 +1,7 @@
-[![Pixel Launcher Mods](https://i.imgur.com/gWgE6Hzl.png)](https://i.imgur.com/gWgE6Hz.png)
+[![OneUI Launcher Mods](https://i.imgur.com/gWgE6Hzl.png)](https://i.imgur.com/gWgE6Hz.png)
 
-Pixel Launcher Mods is a **root** app for Android 12+ that enables you to add a number of features to the stock
-Pixel Launcher, without needing Xposed.
+OneUI Launcher Mods is a **root** app for Android 12+ that enables you to add a number of features to the stock
+OneUI Launcher, without needing Xposed.
 
 - Custom icons, including icon packs, adaptive icon packs and Lawnicons
 - Custom themed icons, add themed icons to apps that don't yet have them officially
@@ -9,7 +9,7 @@ Pixel Launcher, without needing Xposed.
 - Replace the At a Glance **or** Search Box with a widget of your choice
 - Hide apps from the app drawer
 - Resize widgets beyond their original bounds, down to 1x1 or up to the maximum size of your grid
-- Hide the status bar clock while the Pixel Launcher is visible, for ultimate minimalism
+- Hide the status bar clock while the OneUI Launcher is visible, for ultimate minimalism
 
 Please [read the FAQ](https://github.com/KieronQuinn/PixelLauncherMods/blob/master/app/src/main/assets/faq.md) 
 before installing or making issues / asking questions
@@ -35,5 +35,5 @@ Download from the [releases page](https://github.com/KieronQuinn/PixelLauncherMo
 
 ### How It Works
 
-Interested in how Pixel Launcher Mods works? You can read all about it 
+Interested in how OneUI Launcher Mods works? You can read all about it 
 [here](https://medium.com/@KieronQuinn/adventures-in-launcherland-modding-the-pixel-launcher-without-actually-changing-the-apk-or-using-54a0cf34ef01)

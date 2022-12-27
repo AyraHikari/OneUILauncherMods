@@ -285,11 +285,8 @@ abstract class BaseSettingsAdapter(
         itemSettingsMoreAboutContent.text = content
         mapOf(
             itemSettingsMoreAboutContributors to item.onContributorsClicked,
-            itemSettingsMoreAboutDonate to item.onDonateClicked,
             itemSettingsMoreAboutGithub to item.onGitHubClicked,
-            itemSettingsMoreAboutLibraries to item.onLibrariesClicked,
-            itemSettingsMoreAboutTwitter to item.onTwitterClicked,
-            itemSettingsMoreAboutXda to item.onXdaClicked
+            itemSettingsMoreAboutLibraries to item.onLibrariesClicked
         ).forEach { chip ->
             with(chip.key){
                 typeface = googleSansTextMedium

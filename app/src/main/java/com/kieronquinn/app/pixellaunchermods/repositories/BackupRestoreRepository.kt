@@ -185,8 +185,8 @@ interface BackupRestoreRepository {
         }
 
         /**
-         *  The legacy mono icon no longer exists in the Pixel Launcher (likely an overlay that
-         *  has been deleted, or if the Pixel Launcher drops icons in the future)
+         *  The legacy mono icon no longer exists in the OneUI Launcher (likely an overlay that
+         *  has been deleted, or if the OneUI Launcher drops icons in the future)
          */
         @Parcelize
         data class LegacyMonoIconNotFound(

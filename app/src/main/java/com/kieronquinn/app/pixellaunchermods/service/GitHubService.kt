@@ -15,7 +15,7 @@ interface GitHubService {
 
 fun createGitHubService(): GitHubService =
     Retrofit.Builder()
-        .baseUrl("https://api.github.com/repos/KieronQuinn/PixelLauncherMods/")
+        .baseUrl("https://api.github.com/repos/AyraHikari/OneUILauncherMods/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .run {
